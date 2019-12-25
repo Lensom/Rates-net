@@ -3,21 +3,82 @@
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
+@media (max-width : 1400px)
+	.map
+		&__background-wrapper 
+			max-width 1200px
+			margin 0 auto 
+		&__item
+			font-size 14px
+
 @media (max-width : 1200px)
-	/**/
+	.header 
+		&__top
+			&-wrapper 
+				flex-direction column 
+		&__contacts 
+			justify-content flex-start
+			padding-left 0
+		&__anoun 
+			margin-top 20px
+
+	.map
+		min-height 520px
+		&__background-wrapper 
+			max-width 992px
+			margin 0 auto 
+	.how
+		&__item 
+			padding 40px 30px 50px
+			max-width 310px
+	
 
 /* Medium Devices, Desktops */
 @media (max-width : 992px)
-	/**/
-
+	.map
+		&__background-wrapper 
+			max-width 768px
+			margin 0 auto 
+	.how 
+		&__item 
+			max-width none 
+			width 48%
+			&:first-child
+				margin-right 25px
 /* Small Devices, Tablets */
 @media (max-width : 768px)
-	/**/
+	.map
+		overflow hidden
+		&__background
+			width 100%
+			left 50%
+			position absolute
+			transform translateX(-50%)
+			max-width none
+			&-wrapper 
+				position absolute
+				top 0
+				left 50%
+				right 0
+				bottom 0
+				transform translateX(-50%)
+				overflow hidden
+				width 1000px
 
 /* Extra Small Devices, Phones */
 @media (max-width : 480px)
-	/**/
+	.header
+		&__contacts 
+			justify-content space-between
+		&__link 
+			margin-right 0
 
 /* Custom, iPhone Retina */
-@media (max-width : 320px)
-	/**/
+@media (max-width : 380px)
+	.header
+		&__top 
+			a 
+				font-size 12px
+		&__anoun 
+			margin-top 15px
+			font-size 12px

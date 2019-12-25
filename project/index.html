@@ -10,33 +10,361 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="img/favicon/favicon.png" type="image/x-icon">
-
-	<!-- Change color style your browser -->
-	<!-- Chrome, Firefox OS and Opera -->
-	<meta name="theme-color" content="#333">
-	<!-- Windows Phone -->
-	<meta name="msapplication-navbutton-color" content="#333">
-	<!-- iOS Safari -->
-	<meta name="apple-mobile-web-app-status-bar-style" content="#333">
-
-	<!-- meta for social network (optional) -->
-	<meta property="og:title" content="" />
-	<meta property="og:description" content="" />
-	<meta property="og:type" content="" />
-	<meta property="og:url" content="" />
-	<meta property="og:image" content="" />
 	<!-- css -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
 
-	<header>
-
+	<header class="header">
+		<div class="header__top">
+			<div class="wrapper">
+				<div class="header__top-wrapper">
+					<div class="header__contacts">
+						<div class="header__link">
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><g><g><path fill="#fff" d="M15.493 16.525l-.032.04-.144.148a3.261 3.261 0 0 1-2.146.921l-.21.006-.264-.008c-1.136-.073-2.155-.405-3.408-.996a17.685 17.685 0 0 1-5.892-4.593c-1.35-1.616-2.266-3.138-2.88-4.789C.13 6.216-.063 5.307.018 4.325a3.18 3.18 0 0 1 .8-1.866l.147-.155 1.24-1.246.157-.141C2.795.556 3.303.36 3.833.36c.532 0 1.037.197 1.452.552l.135.124c.172.158.338.32.541.527l.306.314 1.188 1.184c.937.933.976 2.194.117 3.153l-.117.124-.87.871c.185.339.423.688.74 1.086.904 1.107 1.841 1.957 2.865 2.605l.085.049.17.088.874-.866c.465-.464 1.03-.717 1.627-.717.542 0 1.052.208 1.479.59l.139.134 1.995 1.994c.467.46.722 1.028.722 1.63 0 .593-.248 1.16-.7 1.629-.1.102-.201.205-.313.314l-.176.169-.363.354-.086.091-.148.168-.023.026zM3.84 2.42c-.034 0-.098.03-.174.1L2.424 3.758c-.211.21-.32.443-.345.74-.048.58.064 1.208.376 2.038.528 1.422 1.328 2.749 2.531 4.192a15.64 15.64 0 0 0 5.2 4.055c.902.43 1.65.69 2.397.776l.25.022.083.003.2-.006c.34-.027.59-.15.808-.382.17-.197.34-.378.562-.593l.176-.17.3-.292.188-.198c.11-.126.093-.176-.051-.318l-2.073-2.064c-.039-.033-.072-.05-.087-.05-.024 0-.093.038-.17.114l-1.246 1.242a1.424 1.424 0 0 1-.209.176c-.206.144-.449.231-.726.231-.166 0-.326-.032-.484-.094l-.118-.053-.177-.102-.439-.223-.198-.11-.086-.052c-1.22-.769-2.325-1.77-3.33-3.007l-.046-.051c-.588-.743-.975-1.372-1.266-2.076l-.048-.16c-.098-.397-.047-.772.243-1.125l.12-.134.149-.134.233-.219.256-.25.297-.3.044-.042.314-.315c.12-.126.103-.153-.052-.307l-1-.997-.592-.602a16.607 16.607 0 0 0-.209-.206l-.255-.241c-.045-.036-.082-.054-.103-.054z"/></g></g></svg>
+							<a href="tel:+442032901285">+44 203 290 1285</a>
+						</div>
+						<div class="header__link">
+							<svg xmlns="http://www.w3.org/2000/svg" width="19" height="15" viewBox="0 0 19 15"><g><g><path fill="#fff" d="M9.496 8.429L3.682 2.672h11.57zm7.292 2.598l-3.41-3.41 3.41-3.41zM5.577 7.597l-3.445 3.44V4.193zm3.158 3.135c.424.421 1.11.42 1.532-.003l1.576-1.576 3.41 3.41H3.667L7.109 9.12zM2.218.5l-.154.005A2.261 2.261 0 0 0-.04 2.758v9.719l.005.154a2.261 2.261 0 0 0 2.253 2.103h14.484l.154-.005a2.261 2.261 0 0 0 2.104-2.252v-9.72l-.005-.153A2.261 2.261 0 0 0 16.702.5z"/></g></g></svg>
+							<a href="mailto:team@ratesnet.com">team@ratesnet.com</a>
+						</div>
+					</div>
+					<div class="header__anoun">
+						Annoucement: 
+						<span>January 2020 RatesNet launches the world's first cross-border and multicurrency bank deposit platform</span>
+					</div>
+				</div>
+			</div>
+		</div>
 	</header>
 
-	<footer>
+	<main class="main">
 
+		<section class="map">
+			<div class="map__background-wrapper">
+				<img class="map__background" src="img/map.png" alt="">
+				<div class="map__item item-1">
+					<div class="map__item-inner">
+						<img src="img/map/map_canada.png" alt="">
+						1.75%
+					</div>
+				</div>
+				<div class="map__item item-2">
+					<div class="map__item-inner">
+						<img src="img/map/map_mexico.png" alt="">
+						7.50%
+					</div>
+				</div>
+				<div class="map__item item-3">
+					<div class="map__item-inner">
+						<img src="img/map/map_usa.png" alt="">
+						1.75%
+					</div>
+				</div>
+				<div class="map__item item-4">
+					<div class="map__item-inner">
+						<img src="img/map/map_states.png" alt="">
+						4.25%
+					</div>
+				</div>
+				<div class="map__item item-5">
+					<div class="map__item-inner">
+						<img src="img/map/map_uruguay.png" alt="">
+						9.25%
+					</div>
+				</div>
+				<div class="map__item item-6">
+					<div class="map__item-inner">
+						<img src="img/map/map_argentina.png" alt="">
+						9.00%
+					</div>
+				</div>
+				<div class="map__item item-7">
+					<div class="map__item-inner">
+						<img src="img/map/map_united.png" alt="">
+						0.75%
+					</div>
+				</div>
+				<div class="map__item item-8">
+					<div class="map__item-inner">
+						<img src="img/map/map_eu.png" alt="">
+						0.00%
+					</div>
+				</div>
+				<div class="map__item item-9">
+					<div class="map__item-inner">
+						<img src="img/map/map_ghana.png" alt="">
+						16.00%
+					</div>
+				</div>
+				<div class="map__item item-10">
+					<div class="map__item-inner">
+						<img src="img/map/map_kenya.png" alt="">
+						9.00%
+					</div>
+				</div>
+				<div class="map__item item-11">
+					<div class="map__item-inner">
+						<img src="img/map/map_mozambique.png" alt="">
+						12.75%
+					</div>
+				</div>
+				<div class="map__item item-12">
+					<div class="map__item-inner">
+						<img src="img/map/map_south_africe.png" alt="">
+						6.50%
+					</div>
+				</div>
+				<div class="map__item item-13">
+					<div class="map__item-inner">
+						<img src="img/map/map_turkey.png" alt="">
+						14.00%
+					</div>
+				</div>
+				<div class="map__item item-14">
+					<div class="map__item-inner">
+						<img src="img/map/map_ukraine.png" alt="">
+						15.50%
+					</div>
+				</div>
+				<div class="map__item item-15">
+					<div class="map__item-inner">
+						<img src="img/map/map_russia.png" alt="">
+						6.50%
+					</div>
+				</div>
+				<div class="map__item item-16">
+					<div class="map__item-inner">
+						<img src="img/map/map_tunisia.png" alt="">
+						7.75%
+					</div>
+				</div>
+				<div class="map__item item-17">
+					<div class="map__item-inner">
+						<img src="img/map/map_kazakhstan.png" alt="">
+						9.25%
+					</div>
+				</div>
+				<div class="map__item item-18">
+					<div class="map__item-inner">
+						<img src="img/map/map_srilanka.png" alt="">
+						7.50%
+					</div>
+				</div>
+				<div class="map__item item-19">
+					<div class="map__item-inner">
+						<img src="img/map/map_vietnam.png" alt="">
+						6.00%
+					</div>
+				</div>
+				<div class="map__item item-20">
+					<div class="map__item-inner">
+						<img src="img/map/map_mongolia.png" alt="">
+						11.00%
+					</div>
+				</div>
+				<div class="map__item item-21">
+					<div class="map__item-inner">
+						<img src="img/map/map_japan.png" alt="">
+						-0.10%
+					</div>
+				</div>
+				<div class="map__item item-22">
+					<div class="map__item-inner">
+						<img src="img/map/map_indonesia.png" alt="">
+						6.50%
+					</div>
+				</div>
+				<div class="map__item item-23">
+					<div class="map__item-inner">
+						<img src="img/map/map_australia.png" alt="">
+						0.75%
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="how">
+			<div class="wrapper">
+				<h2 class="title">How It Works</h2>
+				<div class="how__wrapper">
+					<div class="how__item how__item-1">
+						<h3 class="how__title">
+							<span>Step 01</span>
+							<img src="img/how/man.svg" alt="">
+						</h3>
+						<p class="text">
+							Open account with RatesNet and complete individual or business onboarding
+						</p>
+					</div>
+					<div class="how__item how__item-2">
+						<h3 class="how__title">
+							<span>Step 02</span>
+							<img src="img/how/dollars.svg" alt="">
+						</h3>
+						<p class="text">
+							Fund your account in GBP, USD, EUR and many other local currencies that RatesNet supports. For a full list please <a href="#">click here.</a>
+						</p>
+					</div>
+					<div class="how__item how__item-3">
+						<h3 class="how__title">
+							<span>Step 03</span>
+							<img src="img/how/sigma.svg" alt="">
+						</h3>
+						<p class="text">
+							You can manage your currency cash positions via our easy to use FX interface.
+						</p>
+					</div>
+					<div class="how__item how__item-4">
+						<h3 class="how__title">
+							<span>Step 06</span>
+							<img src="img/how/exchange.svg" alt="">
+						</h3>
+						<p class="text">
+							The matured principal and interest are applied to your RatesNet account. Withdraw, convert funds to another currency or reinvest them.
+						</p>
+					</div>
+					<div class="how__item how__item-5">
+						<h3 class="how__title">
+							<span>Step 05</span>
+							<img src="img/how/mails.svg" alt="">
+						</h3>
+						<p class="text">
+							Following your instruction, you receive an email confirmation detailing the particulars of the investment.
+						</p>
+					</div>
+					<div class="how__item how__item-6">
+						<h3 class="how__title">
+							<span>Step 04</span>
+							<img src="img/how/globe.svg" alt="">
+						</h3>
+						<p class="text">
+							Select country,  currency, bank and tenor that reflects your term and risk preference.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="for">
+			<div class="wrapper">
+				<h4 class="subtitle">For individual investors and fund managers</h4>
+				<div class="for__wrapper">
+					<div class="for__item">
+						<img src="img/for/profits.svg" alt="">
+						<p class="text">
+							<span>Centralised solution to access</span> higher deposit rates from many qualifying Partner Banks across the globee
+						</p>
+					</div>
+					<div class="for__item">
+						<img src="img/for/exch.svg" alt="">
+						<p class="text">
+							<span>Invest in many local</span> currencies as well as in USD, EUR and GBP
+						</p>
+					</div>
+					<div class="for__item">
+						<img src="img/for/refresh.svg" alt="">
+						<p class="text">
+							<span>Return on investment</span> without the associated cost of setting up local infrastructure
+						</p>
+					</div>
+					<div class="for__item">
+						<img src="img/for/puzzle.svg" alt="">
+						<p class="text">
+							<span>Diversify existing portfolio</span> and enhance currency return via local currency deposit
+						</p>
+					</div>
+				</div>
+				<h4 class="subtitle">For Partner Banks</h4>
+				<div class="for__wrapper">
+					<div class="for__item">
+						<img src="img/for/globe.svg" alt="">
+						<p class="text">
+							<span>A low-cost solution</span> for attracting deposits
+						</p>
+					</div>
+					<div class="for__item">
+						<img src="img/for/exchange.svg" alt="">
+						<p class="text">
+							<span>Ability to raise</span> liquidity in multiple currencies
+						</p>
+					</div>
+					<div class="for__item">
+						<img src="img/for/graph.svg" alt="">
+						<p class="text">
+							<span>Tap into a new investor base different</span> from domestic or international wholesale markets
+						</p>
+					</div>
+					<div class="for__item">
+						<img src="img/for/goal.svg" alt="">
+						<p class="text">
+							<span>Flexible and open to reverse</span> enquiries solution
+						</p>
+					</div>
+				</div>
+				<div class="for__risk">
+					FCA Regulated. Capital at risk. No FSCS cover. See <a href="#">Risk Statement</a> and <a href="#">FAQ</a>.
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<div class="wrapper">
+			<div class="footer__wrapper">
+				<h2 class="title">Please Note</h2>
+				<p class="text">
+					Our customers invest in Deposit Linked Notes issued by the RatesNet owned and operated London registered vehicle Direct Funding International Ltd (copmany number 10023452). Your capital is at risk and investment repayments are not guaranteed under the UK Financial Services Compensation Scheme. Investors are advised to undertake appropriate due dilligence as well as to review all the applicable country, currency, credit risk and tax information. Please consult your independent financial advisor (IFA) if you are in doubt as to the suitability of investment for your portfolio.
+				</p>
+				<p class="footer__risk">FCA Regulated. Please read the full <a href="#" target="_blank">Risk Statement</a></p>
+			</div>
+			<div class="footer__center">
+				<div class="footer__logotype">
+					<a href="#">
+						<img src="img/footer__logotype.png" alt="">
+					</a>
+				</div>
+				<div class="footer__menu-wrapper">
+					<ul class="footer__menu">
+						<li><a href="#">Announcements</a></li>
+					</ul>
+					<ul class="footer__menu">
+						<li><a href="#">How it Works</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Risk Statement</a></li>
+						<li><a href="#">Documentation</a></li>
+					</ul>
+					<div class="footer__map">
+						<p><a href="#">View map</a></p>
+						<p>RatesNet, Gemma House <br> 39 Lilestone Street London <br> NW8 8SS, Unidted Kingdom</p>
+					</div>
+					<div class="footer__contacts">
+						<p><a href="mailto:">info@ratesnet.com</a></p>
+						<p><a href="tel:+442032901285">+44 203 290 1285</a></p>
+						<p>skype: <a href="skype:ratesnet?call">ratesnet</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="footer__bottom">
+				<div class="footer__copyright">
+					© ratesnet.com. All rights reserved.
+				</div>
+				<ul class="footer__list">
+					<li><a href="#">
+						<svg xmlns="http://www.w3.org/2000/svg" width="10" height="18" viewBox="0 0 10 18"><g><g><g><path fill="#fff" d="M.33 9.587h1.973v8.123c0 .16.13.29.29.29H5.94c.16 0 .29-.13.29-.29V9.625h2.269a.29.29 0 0 0 .288-.257l.345-2.99a.29.29 0 0 0-.289-.324H6.23V4.179c0-.565.304-.851.904-.851h1.708c.16 0 .29-.13.29-.29V.291a.29.29 0 0 0-.29-.29H6.488A2.31 2.31 0 0 0 6.38 0c-.408 0-1.828.08-2.95 1.112-1.242 1.143-1.07 2.512-1.028 2.75v2.192H.33a.29.29 0 0 0-.29.29v2.952c0 .16.13.29.29.29z"/></g></g></g></svg>
+					</a></li>	
+					<li><a href="#">
+						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><g><g><g><path fill="#fff" d="M4.194 5.79H.58a.29.29 0 0 0-.29.29v11.61c0 .16.13.29.29.29h3.614c.16 0 .29-.13.29-.29V6.08a.29.29 0 0 0-.29-.29z"/></g><g><path fill="#fff" d="M2.384.02A2.386 2.386 0 0 0 0 2.402a2.386 2.386 0 0 0 2.384 2.383 2.385 2.385 0 0 0 2.383-2.383A2.385 2.385 0 0 0 2.384.02z"/></g><g><path fill="#fff" d="M13.386 5.5c-1.451 0-2.524.624-3.175 1.333v-.754a.29.29 0 0 0-.29-.29H6.46a.29.29 0 0 0-.291.29v11.609c0 .16.13.29.29.29h3.606c.16 0 .29-.13.29-.29v-5.744c0-1.936.526-2.69 1.875-2.69 1.47 0 1.586 1.21 1.586 2.79v5.644c0 .16.13.29.29.29h3.608c.16 0 .29-.13.29-.29V11.32c0-2.878-.549-5.82-4.619-5.82z"/></g></g></g></svg>
+					</a></li>	
+					<li><a href="#">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16"><g><g><g><path fill="#fff" d="M19.145 1.855c-.307.136-.622.251-.944.344.381-.431.672-.939.85-1.495a.315.315 0 0 0-.461-.366 7.433 7.433 0 0 1-2.197.868A4.213 4.213 0 0 0 13.459.01 4.197 4.197 0 0 0 9.3 4.744 10.732 10.732 0 0 1 1.935.836a.315.315 0 0 0-.516.04A4.19 4.19 0 0 0 .85 2.984c0 1.01.36 1.968.997 2.717a3.551 3.551 0 0 1-.56-.25.315.315 0 0 0-.468.268v.056c0 1.507.81 2.865 2.051 3.605a3.609 3.609 0 0 1-.319-.047.315.315 0 0 0-.359.406 4.19 4.19 0 0 0 3.071 2.81A7.416 7.416 0 0 1 1.3 13.68c-.297 0-.596-.017-.888-.052a.315.315 0 0 0-.207.578 11.305 11.305 0 0 0 6.113 1.792c4.268 0 6.938-2.013 8.426-3.701 1.856-2.105 2.92-4.892 2.92-7.645 0-.115-.001-.232-.005-.347a8.15 8.15 0 0 0 1.875-1.987.315.315 0 0 0-.389-.463z"/></g></g></g></svg>
+					</a></li>	
+				</ul>
+			</div>
+		</div>
 	</footer>
 
 	<!-- You can add scripts to gulpfile.js -->

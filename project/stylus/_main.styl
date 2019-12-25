@@ -1,0 +1,131 @@
+.map
+    max-width 1440px
+    width 100%
+    position relative
+    margin 0 auto 
+    min-height 693px
+    &__background
+        &-wrapper
+            position absolute
+            top 0
+            left 0
+            right 0
+            bottom 0
+    &__item
+        box-shadow 20px 20px 20px rgba(63, 67, 77, 0.12)
+        background-color $white
+        font-weight 700
+        font-size 16px
+        color $black
+        display inline-block
+        position absolute
+        padding 5px 9px
+        &:after 
+            content ''
+            position absolute
+            right 0
+            bottom -10px
+            border 10px solid transparent 
+            border-right 10px solid $white 
+        &-inner 
+            display flex
+            align-items center
+            img 
+                align-self center 
+                display inline-block
+                margin-right 5px
+
+.how
+    &__wrapper
+        display flex
+        justify-content space-between
+        flex-wrap wrap 
+        margin 50px 0 20px
+    &__item
+        background-color $blue
+        width 33.33%
+        max-width 340px
+        width 100%
+        padding 40px 40px 50px 40px
+        margin-bottom 75px
+        position relative
+        &-1,
+        &-2 
+            &:after
+                position absolute
+                content ''
+                background-image url(../img/left__arrow.svg)
+                width 76px
+                height 14px
+                right -69px
+                top 50%
+                transform translateY(-50%)
+        &-3 
+            &:after
+                position absolute
+                content ''
+                background-image url(../img/down__arrow.svg)
+                height 76px
+                width 14px
+                left 50%
+                top 100%
+                transform translate(-50%, -10%)
+        &-5,
+        &-6
+            &:after
+                position absolute
+                content ''
+                background-image url(../img/right__arrow.svg)
+                width 76px
+                height 14px
+                left -65px
+                top 50%
+                transform translateY(-50%)
+    &__title
+        display flex
+        justify-content space-between
+        align-items flex-end 
+        padding-bottom 10px
+        span 
+            font-weight 700
+            font-size 20px
+            color $white
+            line-height 30px
+        img 
+            position relative
+            top -10px
+    a 
+        color $white
+    .title
+        text-align center
+
+.for
+    background-color #f6f7fa
+    text-align center
+    padding 100px 0 70px
+    span    
+        color $black
+    .text 
+        color $gray
+        margin-top 15px
+    &__item
+        box-shadow 0 2px 4px #eff1f5
+        background-color $white
+        text-align left
+        max-width 270px
+        width 100%
+        padding 30px 30px
+        min-height 285px
+    &__wrapper
+        display flex
+        justify-content space-between
+        margin-top 30px
+        margin-bottom 40px
+    &__risk 
+        font-weight 400
+        font-size 15px
+        color $gray
+        line-height 25px
+        a
+            color $blue
+        
