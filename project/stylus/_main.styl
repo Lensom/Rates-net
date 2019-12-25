@@ -4,6 +4,8 @@
     position relative
     margin 0 auto 
     min-height 693px
+    top -52px
+    left 50px
     &__background
         &-wrapper
             position absolute
@@ -34,6 +36,21 @@
                 align-self center 
                 display inline-block
                 margin-right 5px
+
+.selection
+    text-align center
+    top -85px
+    position relative
+    &__title
+        font-weight 700
+        font-size 20px
+        color $black
+        line-height 30px
+    .footer__risk
+        color $gray
+        margin-top 10px
+        a 
+            color $blue
 
 .how
     &__wrapper
@@ -128,4 +145,43 @@
         line-height 25px
         a
             color $blue
-        
+
+
+.lines
+    &__wrapper
+        display flex
+        align-items flex-end
+    &__titles
+        display flex
+        flex-direction flex-end
+
+.line
+    width 20px
+    background-color $blue-graph
+    position relative
+    z-index 1
+    &__info
+        display flex
+        writing-mode tb-rl
+        width 20px
+        height 100px
+        position relative
+        z-index 1
+        span 
+            font-weight 700
+            font-size 14px
+            color $gray
+            display inline-block
+            padding-top 10px
+    &__wrapper
+        margin-right 20px
+        position relative
+        &:before
+            content ''
+            position absolute
+            bottom 50px
+            left 50%
+            transform translateX(-50%)
+            background-image url(../img/line.png)
+            width 2px
+            height 100%

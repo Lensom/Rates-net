@@ -11,6 +11,7 @@
     font-size 50px
     color $black
     line-height 60px
+    text-align center
 
 .subtitle
     font-family $avenir-font
@@ -24,3 +25,27 @@
     font-size 20px
     color $gray-2
     line-height 30px
+
+.main 
+    padding-top 30px
+
+.btn
+    font-family $avenir-font
+    font-weight 600
+    font-size 14px
+    color $white
+    letter-spacing 1px
+    text-transform uppercase
+    display inline-block
+    padding 7px 23px 6px
+    margin-left 10px
+    transition background .3s ease 
+    &__login
+        background $blue
+        &:hover
+            background $blue-btn
+    &__open
+        background $blue-btn
+        padding 7px 20px 6px
+        &:hover
+            background $blue
