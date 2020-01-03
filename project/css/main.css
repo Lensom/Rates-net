@@ -196,6 +196,8 @@ a {
   color: #000;
   line-height: 60px;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 .subtitle {
   font-family: "AvenirNextCyr", sans-serif;
@@ -305,6 +307,9 @@ a {
 }
 .selection .footer__risk a {
   color: #2364d0;
+}
+.how {
+  padding: 100px 0 0;
 }
 .how__wrapper {
   display: -webkit-box;
@@ -430,6 +435,10 @@ a {
 .for__risk a {
   color: #2364d0;
 }
+.lines {
+  padding: 94px 0 100px;
+  background: #f6f7fa;
+}
 .lines__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -437,6 +446,10 @@ a {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: -81px;
 }
 .lines__titles {
   display: -webkit-box;
@@ -446,6 +459,113 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: flex-end;
           flex-direction: flex-end;
+}
+.lines__information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.lines__title {
+  font-weight: 700;
+  font-size: 20px;
+  color: #858ea3;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+.lines__text {
+  width: 50%;
+}
+.lines__text p {
+  font-family: "AvenirNextCyr", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  color: #000;
+  line-height: 40px;
+}
+.lines__sort {
+  position: relative;
+  top: 16px;
+}
+.lines__sort p {
+  font-weight: 700;
+  font-size: 15px;
+  color: #000;
+  line-height: 25px;
+}
+.lines__sort-text {
+  font-weight: 700;
+  font-size: 15px;
+  color: #858ea3;
+  line-height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 16px;
+}
+.lines-sq {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  margin-right: 10px;
+}
+.lines-sq:after {
+  position: absolute;
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: #f6f7fa;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.lines__rates {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 26px;
+}
+.lines__rates h3 {
+  font-weight: 700;
+  font-size: 20px;
+  color: #000;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.lines__rates p {
+  font-weight: 400;
+  font-size: 20px;
+  color: #858ea3;
+  line-height: 30px;
+}
+.lines__rates .lines__text:last-child {
+  max-width: 270px;
+}
+.lines__fas {
+  font-weight: 400;
+  font-size: 15px;
+  color: #858ea3;
+  line-height: 25px;
+  margin-top: 50px;
+}
+.lines__fas a {
+  color: #2364d0;
+}
+.uk {
+  background: #ff7171;
+}
+.other {
+  background: #3f70d9;
 }
 .line {
   width: 20px;
@@ -472,9 +592,15 @@ a {
   display: inline-block;
   padding-top: 10px;
 }
+.line__info:hover .line__tooltip {
+  display: block;
+}
 .line__wrapper {
-  margin-right: 20px;
+  margin-right: 15px;
   position: relative;
+}
+.line__wrapper:last-child {
+  margin-right: 0;
 }
 .line__wrapper:before {
   content: '';
@@ -486,6 +612,120 @@ a {
   background-image: url("../img/line.png");
   width: 2px;
   height: 100%;
+}
+.line__tooltip {
+  -webkit-writing-mode: horizontal-tb;
+      -ms-writing-mode: lr-tb;
+          writing-mode: horizontal-tb;
+  position: absolute;
+  -webkit-box-shadow: 10px 10px 20px rgba(63,67,77,0.15);
+          box-shadow: 10px 10px 20px rgba(63,67,77,0.15);
+  background-color: #fff;
+  text-align: center;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: none;
+  left: 10px;
+  padding: 4px 8px;
+  top: -55px;
+  white-space: pre;
+}
+.line__tooltip:after {
+  content: '';
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+          transform: translateX(-50%) rotate(45deg);
+  width: 15px;
+  height: 15px;
+  background: #fff;
+}
+.line__tooltip span {
+  font-weight: 700;
+  font-size: 15px;
+  color: #000;
+  padding: 0;
+}
+.accordion__item {
+  position: relative;
+}
+.accordion__item-active .accordion__thumb:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.accordion__item:last-child .accordion__line {
+  display: none;
+}
+.accordion__thumb {
+  font-weight: 500;
+  font-size: 20px;
+  color: #000;
+  line-height: 30px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 30px;
+  padding-top: 25px;
+}
+.accordion__thumb:before {
+  content: '';
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-right: 3px solid #2364d0;
+  border-bottom: 3px solid #2364d0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+  transition: -webkit-transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  position: absolute;
+  top: 34px;
+  left: 2px;
+}
+.accordion__panel {
+  display: none;
+  font-weight: 300;
+  font-size: 20px;
+  color: #858ea3;
+  line-height: 30px;
+  padding: 0 30px;
+  padding-top: 20px;
+}
+.accordion__line {
+  height: 1px;
+  width: 100%;
+  opacity: 0.5;
+  background-image: -webkit-gradient(linear, right top, left top, from(#fff), to(#c1c9d7));
+  background-image: linear-gradient(270deg, #fff 0%, #c1c9d7 100%);
+  margin-top: 25px;
+}
+.faq {
+  padding: 30px 0 100px;
+}
+.faq__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.faq__dropdown {
+  max-width: 800px;
+  padding-top: 22px;
+}
+.faq__title {
+  margin-top: 25px;
+}
+.faq__title .title {
+  text-align: left;
 }
 .item-1 {
   top: 22%;

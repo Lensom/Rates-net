@@ -47,10 +47,9 @@ document.addEventListener('DOMContentLoaded', function(){
     
     for (let i of lines) {
         i.style.marginBottom = `${Math.ceil(minElement) + 58}px`;
-        console.log(i.style)
     }
 
-    // Создание блока с родителем
+    // Создание блока с родителей
     function createElement(k) {
         let div = document.createElement('div');
         div.classList.add('line__wrapper')
@@ -71,6 +70,18 @@ document.addEventListener('DOMContentLoaded', function(){
         procent > 0 ? span.textContent = `+${procent}%`: span.textContent = `${procent}%`;
         div.appendChild(p);
         p.appendChild(span);
+        
+        // Create tooltip
+        let tooltip = document.createElement('div');
+        let tooltipSpan = document.createElement('span');
+        tooltip.classList.add('line__tooltip');
+        let country = k.dataset.country
+        // console.log(country)
+        tooltipSpan.innerHTML = country;
+        tooltip.appendChild(tooltipSpan);
+        p.appendChild(tooltip)
+        
+
         
     }
 
@@ -94,4 +105,17 @@ document.addEventListener('DOMContentLoaded', function(){
         createElement(k);
     }
 
+});
+
+
+$(function() {
+	// (Optional) Active an item if it has the class "is-active"	
+	$(".accordion > .accordion__item-active").children(".accordion__panel").slideDown();
+	
+	$(".accordion > .accordion__item").click(function() {
+		// Cancel the siblings
+		$(this).siblings(".accordion__item").removeClass("is-active").children(".accordion__panel").slideUp();
+		// Toggle the item
+		$(this).toggleClass("accordion__item-active").children(".accordion__panel").slideToggle("ease-out");
+	});
 });
