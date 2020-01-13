@@ -107,6 +107,17 @@ document.addEventListener('DOMContentLoaded', function(){
 
 });
 
+document.addEventListener('DOMContentLoaded', function(){
+
+    let btn = $('.header__mobile');
+    let body = $('body');
+
+    $(btn).on('click', function() {
+        
+    });
+
+});
+
 
 $(function() {
 	// (Optional) Active an item if it has the class "is-active"	

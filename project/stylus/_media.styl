@@ -45,6 +45,40 @@
 			width 48%
 			&:first-child
 				margin-right 25px
+	.header
+		&__menu
+			margin 0
+			flex-direction column
+			align-items center 
+			li 
+				margin 0 0 15px 0
+			&-wrapper 
+				position fixed
+				background $white
+				z-index 10
+				bottom 0
+				top 0 
+				left 0 
+				right 0
+				display flex
+				align-items center 
+				flex-direction column 
+				justify-content center 
+				margin 0
+				height 100vh
+				width 100vw
+				transform translateX(-100%)
+				transition all .3s ease 
+		&__btns 
+			flex-direction column
+			align-items center  
+		&__btn 
+			margin 0 0 15px 0
+			a 
+				margin 0
+		&__mobile
+			display block 
+
 /* Small Devices, Tablets */
 @media (max-width : 768px)
 	.map
