@@ -112,8 +112,9 @@ document.addEventListener('DOMContentLoaded', function(){
     let btn = $('.header__mobile');
     let body = $('body');
 
-    $(btn).on('click', function() {
-        
+    $(btn).on('click', function(e) {
+        e.preventDefault();
+        $(body).toggleClass('show');
     });
 
 });

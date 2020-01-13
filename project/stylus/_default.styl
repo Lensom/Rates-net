@@ -1,9 +1,9 @@
 .wrapper 
-    max-width 1200px
+    max-width 1210px
     width 100%
     margin 0 auto 
     position relative
-    padding 0 15px
+    padding 0 20px
 
 .title 
     font-family $avenir-font
@@ -30,6 +30,7 @@
 
 .main 
     padding-top 30px
+    overflow hidden
 
 .btn
     font-family $avenir-font
@@ -55,5 +56,16 @@
 .show 
     position fixed
     width 100%
-    .header__menu-wrapper
-        transform translateX(0)
+    .header
+        &__menu-wrapper
+            transform translateX(0)
+        &__mobile-line
+            &-1 
+                transform rotate(45deg)
+                top 8px
+            &-2 
+                opacity 0
+            &-3 
+                transform rotate(-45deg)
+                top 8px
+    

@@ -67,6 +67,8 @@
         padding 40px 40px 50px 40px
         margin-bottom 75px
         position relative
+        &:nth-child(3n-1)
+            margin 0 15px 75px
         &-1,
         &-2 
             &:after
@@ -134,6 +136,11 @@
         width 100%
         padding 30px 30px
         min-height 285px
+        margin 0 10px
+        &:first-child
+            margin-left 0
+        &:last-child
+            margin-right 0
     &__wrapper
         display flex
         justify-content space-between
@@ -361,6 +368,7 @@
         max-width 800px
         padding-top 22px
     &__title
-        margin-top 25px
+        padding-top 25px
+        padding-right 50px
         .title 
             text-align left 
