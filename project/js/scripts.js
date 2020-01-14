@@ -129,10 +129,13 @@ document.addEventListener('DOMContentLoaded', function(){
         let imageLink = k.dataset.map;
         img.src = imageLink;
         let procent = k.dataset.procent;
+        console.log(procent);
         p.classList.add('line__info');
 
         p.appendChild(img);
-        procent > 0 ? span.textContent = `+${procent}%`: span.textContent = `${procent}%`;
+        procent > 0 ? span.textContent = `+${procent}%`:
+        procent == 0 ? span.textContent = `+${procent}.00%`: 
+        span.textContent = `${procent}%`;
         div.appendChild(p);
         p.appendChild(span);
         
