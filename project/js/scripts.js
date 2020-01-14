@@ -3,19 +3,23 @@
 
 document.addEventListener('DOMContentLoaded', function(){
 
-    // Проверка разрешения экрана
     let size = false;
+    let left = 150;
+
+    // Проверка разрешения экрана
+    window.addEventListener('resize', function() {
+        sizeScreen();
+        distance();
+        generateLines();
+    });
 
     function sizeScreen() {
-        return window.matchMedia("(max-width: 992px)").matches ?
-            size = true : size;
+        return (window.matchMedia("(max-width: 992px)").matches)
+            ? size = true
+            : size = false;
     }
 
     sizeScreen();
-
-    window.addEventListener('resize', function() {
-        sizeScreen();
-    });
 
     let coef = 12.25;
     let lines = document.querySelectorAll('.line');
@@ -28,49 +32,88 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
     let procents = [];
-    
-    for (let item of lines) {
-        let procent = item.dataset.procent;
-        procents.push(+item.dataset.procent);
-        // Увеличиваем высоту и ширину в зависимости от процента
-        let length = procent * coef;
-        console.log(length)
-        item.style.height = `${length}px`;
-        
-        let width = procent * coef;
-        // item.style.width = `${length}px`;
+    let width = [];
 
-        // Проверяем есть ли класс EU и красим, если меньше 0, то трансформируем
-        if (item.classList.contains('ue')) {
-            item.style.background = backgroundEU
-            if (procent < 0) {
-                let length = -procent * coef;
-                item.style.height = `${length}px`
-                item.style.transform = `translateY(${length}px)`;
-            } else if (procent == 0) {
-                item.style.height = '2px';
-                item.style.background = backgroundEU
+    function generateLines() {
+        for (let item of lines) {
+            let procent = item.dataset.procent;
+            procents.push(+item.dataset.procent);
+            // Увеличиваем высоту и ширину в зависимости от процента
+            let length = procent * coef;
+            console.log(size);
+            if (!size) {
+                item.style.height = `${length}px`;
+                item.style.width = '20px';
+                item.style.transform = `translateY(${0}px)`;
+            } else {
+                item.style.height = '20px';
+                item.style.width = `${length}px`;
+                item.style.transform = `translateY(-50%)`;
             }
-        } else {
-            item.style.background = backgroundOther
-            if (procent < 0) {
-                let length = -procent * coef;
-                item.style.height = `${length}px`
-                item.style.transform = `translateY(${length}px)`;
-            } else if (procent == 0) {
-                item.style.height = '2px';
+    
+            width.push(length);
+    
+            // Проверяем есть ли класс EU и красим, если меньше 0, то трансформируем
+            if (item.classList.contains('ue')) {
+                item.style.background = backgroundEU
+                if (procent < 0) {
+                    let length = -procent * coef;
+                    if (!size) {
+                        item.style.height = `${length}px`
+                        item.style.transform = `translateY(${length}px)`;
+    
+                    } else {
+                        item.style.width = `${length}px`
+                    }
+                } else if (procent == 0) {
+                    item.style.background = backgroundEU;
+                    if (!size) {
+                        item.style.height = '2px';
+                    } else {
+                        item.style.height = '20px';
+                        item.style.width = '2px';
+                    }
+                }
+            } else {
                 item.style.background = backgroundOther
+                if (procent < 0) {
+                    let length = -procent * coef;
+                    if (!size) {
+                        item.style.height = `${length}px`
+                        item.style.transform = `translateY(${length}px)`;
+                    } else {
+                        item.style.width = `${length}px`
+                    }
+                } else if (procent == 0) {
+                    item.style.height = '2px';
+                    item.style.background = backgroundOther;
+                }
             }
         }
     }
 
+    generateLines();
+
     let minElement = Math.min(...procents);
     minElement = -minElement * coef;
-    
-    for (let i of lines) {
-        i.style.marginBottom = `${Math.ceil(minElement) + 58}px`;
+
+    function distance() {
+        for (let i = 0; i < lines.length; i++) {
+            if (!size) {
+                lines[i].style.marginBottom = `${Math.ceil(minElement) + 58}px`;
+                lines[i].style.left = '0px';
+            } else {
+                if (width[i] < 0) {
+                    lines[i].style.left = `${left + width[i]}px`
+                } else {
+                    lines[i].style.left = `${left}px`;
+                }
+            }
+        }
     }
 
+    distance();
+    
     // Создание блока с родителями
     function createElement(k) {
         let div = document.createElement('div');
@@ -102,8 +145,6 @@ document.addEventListener('DOMContentLoaded', function(){
         tooltipSpan.innerHTML = country;
         tooltip.appendChild(tooltipSpan);
         p.appendChild(tooltip)
-        
-
         
     }
 

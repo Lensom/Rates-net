@@ -1231,6 +1231,9 @@ a {
     max-width: 594px;
     margin: 0 auto;
   }
+  .lines {
+    padding: 75px 0 85px;
+  }
   .lines__wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1244,14 +1247,17 @@ a {
   .lines__sort {
     top: auto;
   }
+  .lines__text p {
+    line-height: 35px;
+    font-size: 25px;
+  }
   .line {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    top: -5px;
-    left: 250px;
-    -webkit-transform: rotate(90deg) translateY(-50%);
-            transform: rotate(90deg) translateY(-50%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    top: 10px;
   }
   .line__wrapper {
     display: -webkit-box;
