@@ -1,4 +1,19 @@
 document.addEventListener('DOMContentLoaded', function(){
+
+    // Проверка разрешения экрана
+    let size = false;
+
+    function sizeScreen() {
+        return window.matchMedia("(max-width: 992px)").matches ?
+            size = true : size;
+    }
+
+    sizeScreen();
+
+    window.addEventListener('resize', function() {
+        sizeScreen();
+    });
+
     let coef = 12.25;
     let lines = document.querySelectorAll('.line');
     let parent = document.querySelector('.lines__wrapper');
@@ -14,17 +29,21 @@ document.addEventListener('DOMContentLoaded', function(){
     for (let item of lines) {
         let procent = item.dataset.procent;
         procents.push(+item.dataset.procent);
-        // Увеличиваем высоту в зависимости от процента
-        let height = procent * coef;
-        item.style.height = `${height}px`;
+        // Увеличиваем высоту и ширину в зависимости от процента
+        let length = procent * coef;
+        console.log(length)
+        item.style.height = `${length}px`;
+        
+        let width = procent * coef;
+        // item.style.width = `${length}px`;
 
         // Проверяем есть ли класс EU и красим, если меньше 0, то трансформируем
         if (item.classList.contains('ue')) {
             item.style.background = backgroundEU
             if (procent < 0) {
-                let height = -procent * coef;
-                item.style.height = `${height}px`
-                item.style.transform = `translateY(${height}px)`;
+                let length = -procent * coef;
+                item.style.height = `${length}px`
+                item.style.transform = `translateY(${length}px)`;
             } else if (procent == 0) {
                 item.style.height = '2px';
                 item.style.background = backgroundEU
@@ -32,9 +51,9 @@ document.addEventListener('DOMContentLoaded', function(){
         } else {
             item.style.background = backgroundOther
             if (procent < 0) {
-                let height = -procent * coef;
-                item.style.height = `${height}px`
-                item.style.transform = `translateY(${height}px)`;
+                let length = -procent * coef;
+                item.style.height = `${length}px`
+                item.style.transform = `translateY(${length}px)`;
             } else if (procent == 0) {
                 item.style.height = '2px';
                 item.style.background = backgroundOther
@@ -49,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function(){
         i.style.marginBottom = `${Math.ceil(minElement) + 58}px`;
     }
 
-    // Создание блока с родителей
+    // Создание блока с родителями
     function createElement(k) {
         let div = document.createElement('div');
         div.classList.add('line__wrapper')
