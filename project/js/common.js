@@ -1,10 +1,10 @@
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function () {
 
     let size = false;
     let left = 150;
 
     // Проверка разрешения экрана
-    window.addEventListener('resize', function() {
+    window.addEventListener('resize', function () {
         sizeScreen();
         distance();
         generateLines();
@@ -37,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function(){
             procents.push(+item.dataset.procent);
             // Увеличиваем высоту и ширину в зависимости от процента
             let length = procent * coef;
-            console.log(size);
             if (!size) {
                 item.style.height = `${length}px`;
                 item.style.width = '20px';
@@ -47,9 +46,9 @@ document.addEventListener('DOMContentLoaded', function(){
                 item.style.width = `${length}px`;
                 item.style.transform = `translateY(-50%)`;
             }
-    
+
             width.push(length);
-    
+
             // Проверяем есть ли класс EU и красим, если меньше 0, то трансформируем
             if (item.classList.contains('ue')) {
                 item.style.background = backgroundEU
@@ -58,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function(){
                     if (!size) {
                         item.style.height = `${length}px`
                         item.style.transform = `translateY(${length}px)`;
-    
+
                     } else {
                         item.style.width = `${length}px`
                     }
@@ -110,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function(){
     }
 
     distance();
-    
+
     // Создание блока с родителями
     function createElement(k) {
         let div = document.createElement('div');
@@ -126,31 +125,29 @@ document.addEventListener('DOMContentLoaded', function(){
         let imageLink = k.dataset.map;
         img.src = imageLink;
         let procent = k.dataset.procent;
-        console.log(procent);
         p.classList.add('line__info');
 
         p.appendChild(img);
-        procent > 0 ? span.textContent = `+${procent}%`:
-        procent == 0 ? span.textContent = `+${procent}.00%`: 
-        span.textContent = `${procent}%`;
+        procent > 0 ? span.textContent = `+${procent}%` :
+            procent == 0 ? span.textContent = `+${procent}.00%` :
+                span.textContent = `${procent}%`;
         div.appendChild(p);
         p.appendChild(span);
-        
+
         // Create tooltip
         let tooltip = document.createElement('div');
         let tooltipSpan = document.createElement('span');
         tooltip.classList.add('line__tooltip');
         let country = k.dataset.country
-        // console.log(country)
         tooltipSpan.innerHTML = country;
         tooltip.appendChild(tooltipSpan);
         p.appendChild(tooltip)
-        
+
     }
 
     // Европа
     let euLines = [...eu];
-    euLines.sort(function(a, b) {
+    euLines.sort(function (a, b) {
         return a.dataset.procent - b.dataset.procent;
     })
 
@@ -160,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     // Остальной мир
     let arrayLines = [...others];
-    arrayLines.sort(function(a, b) {
+    arrayLines.sort(function (a, b) {
         return a.dataset.procent - b.dataset.procent;
     })
 
@@ -170,12 +167,12 @@ document.addEventListener('DOMContentLoaded', function(){
 
 });
 
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function () {
 
     let btn = $('.header__mobile');
     let body = $('body');
 
-    $(btn).on('click', function(e) {
+    $(btn).on('click', function (e) {
         e.preventDefault();
         $(body).toggleClass('show');
     });
@@ -183,14 +180,23 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 
 
-$(function() {
-	// (Optional) Active an item if it has the class "is-active"	
-	$(".accordion > .accordion__item-active").children(".accordion__panel").slideDown();
-	
-	$(".accordion > .accordion__item").click(function() {
-		// Cancel the siblings
-		$(this).siblings(".accordion__item").removeClass("is-active").children(".accordion__panel").slideUp();
-		// Toggle the item
-		$(this).toggleClass("accordion__item-active").children(".accordion__panel").slideToggle("ease-out");
-	});
+$(function () {
+    // (Optional) Active an item if it has the class "is-active"	
+    $(".accordion > .accordion__item-active").children(".accordion__panel").slideDown();
+
+    $(".accordion > .accordion__item").click(function () {
+        // Cancel the siblings
+        $(this).siblings(".accordion__item").removeClass("is-active").children(".accordion__panel").slideUp();
+        // Toggle the item
+        $(this).toggleClass("accordion__item-active").children(".accordion__panel").slideToggle("ease-out");
+    });
+
+    $(".header__menu").on("click", "a", function (event) {
+        event.preventDefault();
+        var id = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({
+            scrollTop: top
+        }, 1000);
+    });
 });

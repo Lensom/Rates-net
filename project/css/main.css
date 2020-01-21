@@ -247,7 +247,7 @@ a {
 }
 .btn {
   font-family: "AvenirNextCyr", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 14px;
   color: #fff;
   letter-spacing: 1px;
@@ -262,14 +262,14 @@ a {
   background: #2364d0;
 }
 .btn__login:hover {
-  background: #ff7171;
+  background: #0046ba;
 }
 .btn__open {
   background: #ff7171;
   padding: 7px 20px 6px;
 }
 .btn__open:hover {
-  background: #2364d0;
+  background: #fc4747;
 }
 .show {
   position: fixed;
@@ -278,6 +278,7 @@ a {
 .show .header__menu-wrapper {
   -webkit-transform: translateX(0);
           transform: translateX(0);
+  visibility: visible;
 }
 .show .header__mobile-line-1 {
   -webkit-transform: rotate(45deg);
@@ -340,6 +341,7 @@ a {
       align-self: center;
   display: inline-block;
   margin-right: 5px;
+  max-width: 20px;
 }
 .selection {
   text-align: center;
@@ -651,6 +653,9 @@ a {
 }
 .line__info:hover .line__tooltip {
   display: block;
+}
+.line__info img {
+  max-width: 20px;
 }
 .line__wrapper {
   margin-right: 15px;
@@ -1512,8 +1517,11 @@ a {
     width: 100vw;
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+    visibility: hidden;
   }
   .header__btns {
     -webkit-box-orient: vertical;
@@ -1525,6 +1533,7 @@ a {
             align-items: center;
     max-width: 215px;
     width: 100%;
+    margin-top: 25px;
   }
   .header__btn {
     margin: 0 0 15px 0;
@@ -1689,6 +1698,9 @@ a {
   }
   .header__logo {
     max-width: 150px;
+  }
+  .header__btns {
+    margin: 0;
   }
   .title {
     font-size: 40px;
